@@ -1,5 +1,6 @@
 package com.lucas.diniz.events
 
+import com.lucas.diniz.events.adapter.EventAdapter
 import com.lucas.diniz.events.data.EventsApi
 import com.lucas.diniz.events.data.EventsRepository
 import com.lucas.diniz.events.dto.Events
@@ -13,6 +14,8 @@ val eventsModule = module {
     factory { EventsViewModel(get()) }
 
     factory { EventsUseCase(get()) }
+
+    factory { EventAdapter() }
 
     factory {
         EventsRepository(RetrofitClient.getApi(EventsApi::class.java))

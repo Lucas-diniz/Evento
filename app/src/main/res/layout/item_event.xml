@@ -1,0 +1,72 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/schedule_cardView"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="wrap_content"
+    android:layout_height="140dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="@dimen/default_margin"
+    android:layout_marginRight="@dimen/default_margin"
+    android:layout_marginBottom="@dimen/medium_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_broken_24" />
+
+        <TextView
+            android:id="@+id/tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_toEndOf="@+id/image"
+            android:text="@string/default_tiltle"
+            android:textSize="@dimen/tile_text_size" />
+
+        <TextView
+            android:id="@+id/exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tile"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_toEndOf="@+id/image"
+            android:paddingTop="3dp"
+            android:paddingEnd="3dp"
+            android:text="@string/exchange" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tile"
+            android:layout_toEndOf="@+id/exchange"
+            android:text="@string/default_price"
+            android:textSize="@dimen/tile_text_size" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@+id/image"
+            android:text="@string/default_data"
+            android:textSize="@dimen/default_text_size" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

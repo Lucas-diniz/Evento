@@ -1,10 +1,8 @@
 package com.lucas.diniz.events.dto
 
-import java.util.*
-
 data class Events(
-    val people: String = "",
-    val date: Date = Date(),
+    val people: List<String> = listOf(),
+    val date: Long = 0,
     val description: String =  "",
     val image: String = "",
     val longitude: Double = 0.0,
