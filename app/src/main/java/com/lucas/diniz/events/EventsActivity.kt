@@ -11,8 +11,8 @@ class EventsActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, EventsFragment.newInstance())
-                    .commitNow()
+                .replace(R.id.container, EventsFragment.newInstance())
+                .commitNow()
         }
     }
 }

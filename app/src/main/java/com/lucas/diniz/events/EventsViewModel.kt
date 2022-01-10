@@ -22,9 +22,9 @@ class EventsViewModel(private val useCase: EventsUseCase) : ViewModel() {
                     call: Call<List<Events>>,
                     response: Response<List<Events>>
                 ) {
-                    if(response.isSuccessful){
+                    if (response.isSuccessful) {
                         _listEvents.value = response.body()
-                    }else{
+                    } else {
                         _listEvents.value = null
                     }
                 }

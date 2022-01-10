@@ -44,23 +44,22 @@ class EventsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mContext = view.context
-
     }
 
     private fun initListEvents() {
         viewModel.listEvents()
     }
 
-    private fun initRecycleView(){
+    private fun initRecycleView() {
         _binding.eventRecyclerView.layoutManager = LinearLayoutManager(mContext)
     }
 
     private fun initObservables() {
         viewModel.listEvents.observe(this, {
-            if (it != null){
+            if (it != null) {
                 buildListListEvents(it)
                 _binding.progressBar.visibility = GONE
-            }else{
+            } else {
                 _binding.progressBar.visibility = GONE
                 _binding.eventRecyclerView.visibility = GONE
                 _binding.errorMessage.visibility = VISIBLE
@@ -68,7 +67,7 @@ class EventsFragment : Fragment() {
         })
     }
 
-    private fun buildListListEvents(listEvents: List<Events>){
+    private fun buildListListEvents(listEvents: List<Events>) {
         eventAdapter.listEvent = listEvents
         eventAdapter.mContext = mContext
         _binding.eventRecyclerView.layoutManager = LinearLayoutManager(mContext)
