@@ -1,21 +1,16 @@
 package com.lucas.diniz.events
 
-import com.lucas.diniz.events.adapter.EventAdapter
-import com.lucas.diniz.events.data.EventsApi
-import com.lucas.diniz.events.data.EventsRepository
-import com.lucas.diniz.events.dto.Events
+import com.lucas.diniz.events.list.dto.Events
+import com.lucas.diniz.events.repository.EventsApi
+import com.lucas.diniz.events.repository.EventsRepository
 import com.lucas.diniz.network.RetrofitClient
 import org.koin.dsl.module
 
-val eventsModule = module {
+val eventsListModule = module {
 
     factory { Events() }
 
-    factory { EventsViewModel(get()) }
-
     factory { EventsUseCase(get()) }
-
-    factory { EventAdapter() }
 
     factory {
         EventsRepository(RetrofitClient.getApi(EventsApi::class.java))

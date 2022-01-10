@@ -1,4 +1,4 @@
-package com.lucas.diniz.events
+package com.lucas.diniz.events.list
 
 import android.content.Context
 import android.os.Bundle
@@ -10,15 +10,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lucas.diniz.databinding.EventFragmentBinding
-import com.lucas.diniz.events.adapter.EventAdapter
-import com.lucas.diniz.events.dto.Events
+import com.lucas.diniz.events.list.adapter.EventAdapter
+import com.lucas.diniz.events.list.dto.Events
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class EventsFragment : Fragment() {
+class EventsListFragment : Fragment() {
 
     companion object {
-        fun newInstance() = EventsFragment()
+        fun newInstance() = EventsListFragment()
     }
 
     private lateinit var mContext: Context

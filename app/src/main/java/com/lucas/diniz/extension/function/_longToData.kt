@@ -1,4 +1,4 @@
-package com.lucas.diniz.extensionFunction
+package com.lucas.diniz.extension.function
 
 import java.sql.Timestamp
 import java.text.SimpleDateFormat

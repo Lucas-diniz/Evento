@@ -1,4 +1,4 @@
-package com.lucas.diniz.events.adapter
+package com.lucas.diniz.events.list.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,8 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.lucas.diniz.R
-import com.lucas.diniz.events.dto.Events
-import com.lucas.diniz.extensionFunction.toDataFormatted
+import com.lucas.diniz.events.list.dto.Events
+import com.lucas.diniz.extension.function.toDataFormatted
+import com.lucas.diniz.extension.function.toPrice
 import com.squareup.picasso.Picasso
 
 class EventAdapter : RecyclerView.Adapter<EventAdapter.EventHolder>() {
@@ -31,7 +32,7 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventHolder>() {
 
         Picasso.with(mContext).load(event.image).into(holder.image)
         holder.tile.text = event.title
-        holder.price.text = event.price.toString()
+        holder.price.text = event.price.toPrice()
         holder.data.text = event.date.toDataFormatted(DATA_FORMAT)
     }
 
@@ -47,6 +48,6 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventHolder>() {
     }
 
     companion object {
-        const val DATA_FORMAT = "dd-MM-yyyy HH:mm"
+        const val DATA_FORMAT = "dd/MM/yyyy HH:mm"
     }
 }

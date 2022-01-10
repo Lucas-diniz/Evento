@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="gray">#EDEDED</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="read_price">#DF5656</color>
 </resources>

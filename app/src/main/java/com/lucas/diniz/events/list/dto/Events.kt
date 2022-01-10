@@ -1,4 +1,4 @@
-package com.lucas.diniz.events.dto
+package com.lucas.diniz.events.list.dto
 
 data class Events(
     val people: List<String> = listOf(),
