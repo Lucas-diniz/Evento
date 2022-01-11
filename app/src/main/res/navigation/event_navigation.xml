@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_navigation"
+    app:startDestination="@id/eventList">
+
+    <fragment
+        android:id="@+id/eventList"
+        android:name="com.lucas.diniz.events.features.list.EventsListFragment"
+        tools:layout="@layout/event_list_fragment">
+
+        <action
+            android:id="@+id/event_detail"
+            app:destination="@id/eventDetail" />
+
+        <action
+            android:id="@+id/event_check_in"
+            app:destination="@id/eventCheckIn" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetail"
+        android:name="com.lucas.diniz.events.features.detail.EventsDetailsFragment"
+        tools:layout="@layout/event_details_fragment">
+
+        <action
+            android:id="@+id/event_list"
+            app:destination="@id/eventList" />
+
+        <action
+            android:id="@+id/event_check_in"
+            app:destination="@id/eventCheckIn" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/eventCheckIn"
+        android:name="com.lucas.diniz.events.features.checkIn.EventCheckInFragment"
+        tools:layout="@layout/event_check_in_bottomSheet"/>
+
+</navigation>

@@ -1,4 +1,4 @@
-package com.lucas.diniz.events.detail
+package com.lucas.diniz.events.features.detail
 
 import org.koin.dsl.module
 

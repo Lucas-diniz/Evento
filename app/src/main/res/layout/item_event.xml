@@ -94,7 +94,7 @@
                     android:textSize="@dimen/tile_text_size" />
 
                 <Button
-                    android:id="@+id/checkin"
+                    android:id="@+id/info"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                     android:text="@string/details" />
 
                 <Button
-                    android:id="@+id/info"
+                    android:id="@+id/checkin"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
